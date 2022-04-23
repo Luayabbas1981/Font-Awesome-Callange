@@ -1,0 +1,184 @@
+body {
+    height: 100vh;
+    background-color: #dfe8eb;
+  }
+  main {
+    position: relative;
+    perspective: 400px;
+  }
+
+  .cam2 {
+    position: absolute;
+    font-size: 4vw;
+    top: 45%;
+    left: 75%;
+    opacity: 0;
+    transform: rotate(30deg);
+    animation: cam 4s 5s alternate;
+  }
+ 
+
+  .fan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 1.5vh;
+    background-color: #092852;
+    width: 50%;
+    padding: 30px;
+    border-radius: 1rem;
+  }
+  .one {
+    display: flex;
+
+    column-gap: 0.2vw;
+  }
+  .one > div {
+    animation: smile 0.5s 7s infinite alternate linear;
+    font-size: 2.2vw;
+  }
+  .one:nth-child(odd) {
+    color: rgb(239, 239, 78);
+  }
+  .one:nth-child(even) {
+    color: rgb(247, 181, 58);
+  }
+  .tow {
+    position: relative;
+    margin-top: 285px;
+    margin-left: auto;
+  }
+  .car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.3vw;
+
+    font-size: 3.9vw;
+  }
+  .car i {
+    color: var(--c);
+  }
+  .car :nth-child(even) i {
+    font-size: 2.5vw;
+  }
+  .step {
+    position: absolute;
+    font-size: 8.3vw;
+    margin-left: 25%;
+    margin-top: 250px;
+    color: rgb(98, 96, 96);
+  }
+  .moto {
+    position: absolute;
+    font-size: 3vw;
+    margin-top: 290px;
+    animation: speed 8s 0.5s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes speed {
+    5% {
+      margin-left: 23%;
+      transform: rotate(-15deg);
+    }
+
+    45% {
+      margin-top: 30px;
+      margin-left: 40%;
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+      
+    }
+    80% {
+      transform: rotate(45deg);
+      margin-left: 65%;
+      margin-top: 280px;
+    }
+    85% {
+      margin-left: 75%;
+      margin-top: 285px;
+    }
+    100% {
+      transform: rotate(0);
+      margin-left: 87%;
+      margin-top: 285px;
+    }
+  }
+  @keyframes smile {
+    from {
+      transform: rotate(25deg);
+    }
+    to {
+      transform: rotate(-25deg);
+    }
+  }
+  @keyframes cam {
+    to {
+      opacity: 1;
+      box-shadow: 50px 50px 150px white;
+    }
+  }
+ 
+  @media (max-width: 1000px) {
+    body {
+      height: 50vh;
+    }
+    main {
+      margin-top: 27%;
+    }
+    .cam2 {
+      margin-top: 60px;
+    }
+    .medal {
+      margin-top: 10px;
+    }
+    .car {
+      font-size: 6vw;
+    }
+    .moto {
+      font-size: 5vw;
+      margin-top: 200px;
+    }
+    .step {
+      font-size: 12vw;
+      margin-top: 82px;
+      margin-left: 74px;
+    }
+    .two {
+      margin-top: 50px;
+    }
+    @keyframes speed {
+      5% {
+        margin-left: 50px;
+        transform: rotate(-10deg);
+      }
+
+      45% {
+        margin-top: 0px;
+        margin-left: 40%;
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      80% {
+        transform: rotate(45deg);
+        margin-left: 65%;
+        margin-top: 90px;
+      }
+      85% {
+        margin-left: 75%;
+        margin-top: 95px;
+      }
+      100% {
+        transform: rotate(0);
+        margin-left: 87%;
+        margin-top: 95px;
+      }
+    }
+  }
